@@ -1,0 +1,41 @@
+# CodeBook for Human Activity Recognition Using Smartphones Dataset
+
+## Overview
+
+This code book provides a detailed description of the variables used in the tidy dataset created from the Human Activity Recognition dataset. The data consists of measurements collected from the accelerometers of the Samsung Galaxy S smartphone.
+
+## Data Source
+
+The dataset was obtained from the UCI Machine Learning Repository: [Human Activity Recognition Using Smartphones](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
+
+## Variables in the Tidy Data Set
+
+| Variable Name  | Description                                             |
+|----------------|---------------------------------------------------------|
+| subject        | Identifier for each subject (1-30)                     |
+| activity       | Activity performed by the subject (e.g., WALKING, SITTING) |
+| tBodyAcc.mean.X | Mean of the body acceleration signal in X direction    |
+| tBodyAcc.mean.Y | Mean of the body acceleration signal in Y direction    |
+| tBodyAcc.mean.Z | Mean of the body acceleration signal in Z direction    |
+| tBodyAcc.std.X  | Standard deviation of the body acceleration signal in X direction |
+| tBodyAcc.std.Y  | Standard deviation of the body acceleration signal in Y direction |
+| tBodyAcc.std.Z  | Standard deviation of the body acceleration signal in Z direction |
+| tGravityAcc.mean.X | Mean of the gravity acceleration signal in X direction |
+| tGravityAcc.mean.Y | Mean of the gravity acceleration signal in Y direction |
+| tGravityAcc.mean.Z | Mean of the gravity acceleration signal in Z direction |
+| tGravityAcc.std.X  | Standard deviation of the gravity acceleration signal in X direction |
+| tGravityAcc.std.Y  | Standard deviation of the gravity acceleration signal in Y direction |
+| tGravityAcc.std.Z  | Standard deviation of the gravity acceleration signal in Z direction |
+| ...            | ... (Include additional variables as necessary)        |
+
+## Data Transformation Steps
+
+1. **Data Merging**: The training and test datasets were merged to create a single dataset.
+2. **Mean and Standard Deviation Extraction**: Only the measurements that include mean and standard deviation were extracted. This was done using the feature names that contained "mean()" or "std()".
+3. **Descriptive Activity Names**: The activity labels were replaced with descriptive names from the activity labels file.
+4. **Descriptive Variable Names**: The variable names were modified to be more descriptive (e.g., `tBodyAcc.mean.X` instead of `V1`).
+5. **Tidy Data Set Creation**: A second independent tidy dataset was created containing the average of each variable for each activity and each subject.
+
+## Conclusion
+
+This code book serves as a reference for understanding the variables and transformations used in the tidy dataset. It can be useful for anyone looking to analyze or interpret the data further.
